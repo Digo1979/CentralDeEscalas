@@ -1,0 +1,49 @@
+#--------------------------------------------VERSÃO: 0.0.4------------------------------------------------
+#
+# Copyright © 2021 Informatize. Todos os direitos reservados
+#
+#----------------------------------------------------------------------------------------------------------
+# Bloquear acesso a arquivo não indexado
+# Assim fazendo que arquivo que não sejam nomeados como index sejam acessados manualmente
+
+Options All -Indexes
+
+#----------------------------------------------------------------------------------------------------------
+# O cabeçalho de resposta HTTP Strict-Transport-Security (geralmente abreviado como HSTS)
+# Definindo o limite máximo de requisição OBs: O valor de 31536000 foi visto como um valor recomendado
+
+<IfModule mod_headers.c>
+  Strict-Transport-Security "max-age=16070400; includeSubDomains" "expr=%{HTTPS} == 'on'"
+  Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
+</IfModule>
+
+#----------------------------------------------------------------------------------------------------------
+# Criando uma política de segurança
+# Definindo a política de segurança para o link padrão da aplicação
+
+<IfModule mod_headers.c>
+  Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
+</IfModule>
+
+#----------------------------------------------------------------------------------------------------------
+#Adicionando uma política de referência do site setado como não referente
+# Instrui o navegador a nunca enviar o cabeçalho do remetente com solicitações feitas a partir do seu site
+
+<IfModule mod_headers.c>
+  Header always set Referrer-Policy "strict-origin-when-cross-origin" "expr=%{CONTENT_TYPE} =~ m#text\/(css|html|javascript)|application\/pdf|xml#i"
+</IfModule>
+
+#----------------------------------------------------------------------------------------------------------
+# Política de permissão para <i-frame> em tags HTML
+# Essa função tem como redirecionar <i-frame> para nosso domínio
+<IfModule mod_headers.c>
+  Header set Permissions-Policy: geolocation=(), accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+</IfModule>
+#----------------------------------------------------------------------------------------------------------
+# Adicionando um charset padrão UTF-8
+
+<IfModule mod_mime.c>
+  AddDefaultCharset utf-8
+</IfModule>
+
+#---------------------------------------------------------------------------------------------------------
