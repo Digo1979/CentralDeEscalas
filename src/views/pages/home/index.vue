@@ -43,14 +43,14 @@
       </v-dialog>
     </v-row>
     <div>
-      <multiline-filter
+      <!-- <multiline-filter
         :opcoes-tipo="opcoes"
         :qt-maxima="20"
         :lista-traducao="$t('MULTIFILTER')"
         :analitico-sintetico="false"
         @nok="alertarErro"
         @ok="consultarServico"
-      />
+      /> -->
     </div>
 
     <v-card
@@ -248,7 +248,7 @@
 </template>
 
 <script>
-import MultilineFilter from "@saastec/saastec-multiline-filter";
+// import MultilineFilter from "@saastec/saastec-multiline-filter";
 import moment from "moment";
 import FormCadastroEmpresa from "@/components/SaastecComponents/FormCadastroEmpresa";
 import DetalhesLoja from "@/components/SaastecComponents/DetalhesLoja";
@@ -332,7 +332,7 @@ export default {
     FormCadastroEmpresa,
     FormCadastroFilial,
     DetalhesLoja,
-    "multiline-filter": MultilineFilter,
+    // "multiline-filter": MultilineFilter,
   },
   data: function () {
     return {
