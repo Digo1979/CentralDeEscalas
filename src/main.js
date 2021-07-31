@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import NProgress from 'vue-nprogress'
-import wso2 from "@saastec/saastec-wso2-service";
+// import wso2 from "@saastec/saastec-wso2-service";
 import './registerServiceWorker'
 import './global.scss'
 import moment from 'moment';
@@ -89,18 +89,18 @@ Vue.use(Switch)
 Vue.use(notification)
 Vue.use(NProgress)
 
-Vue.use(wso2, {
-  router: router,
-  tokenEndpoint: process.env.VUE_APP_TOKEN_ENDPOINT,
-  serviceUrl: process.env.VUE_APP_SERVICE_URL,
-  criptoUrl: process.env.VUE_APP_CRIPTO_URL,
-  token: process.env.VUE_APP_TOKEN_AUTH,
-  mode: process.env.NODE_ENV,
-  app: process.env.VUE_APP_CD_SIST,
-});
+// Vue.use(wso2, {
+//   router: router,
+//   tokenEndpoint: process.env.VUE_APP_TOKEN_ENDPOINT,
+//   serviceUrl: process.env.VUE_APP_SERVICE_URL,
+//   criptoUrl: process.env.VUE_APP_CRIPTO_URL,
+//   token: process.env.VUE_APP_TOKEN_AUTH,
+//   mode: process.env.NODE_ENV,
+//   app: process.env.VUE_APP_CD_SIST,
+// });
 
 Vue.use(VuePageTitle, {
-  prefix: 'SaaSTec SaaSCom | ',
+  prefix: 'Central de Escalas | ',
   router,
 })
 
