@@ -1,47 +1,23 @@
-#
-# Copyright © 2021 Informatize. Todos os direitos reservados
-#
-# Lista de arquivos ignorados pelo Git para não subir sem necessidade no repositório
-
-##################################
-# Pastas                         #
-##################################
-/node_modules
+.DS_Store
+node_modules
 /dist
 
-##################################
-# Arquivos                       #
-##################################
 
-# Gerado automaticamente para qualquer operação em que o npm modifica a árvore node_modules ou package.json.
-# Ele descreve a árvore exata que foi gerada, de modo que as instalações subsequentes possam gerar árvores
-# idênticas, independentemente das atualizações de dependência intermediárias
-package-lock.json
-
-# Arquivos de log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-yarn.lock*
-debug.log
-
-# Arquivos de environment local (variáveis de ambiente)
+# local env files
 .env.local
 .env.*.local
 
-# Arquivos do SO
-# Windows
-desktop.ini
-thumbs.db
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# macOS
-.DS_Store
-
-# Arquivos da IDE de trabalho
+# Editor directories and files
 .idea
 .vscode
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw*
+*.sw?

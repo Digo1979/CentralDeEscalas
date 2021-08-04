@@ -1,62 +1,20 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Login from '@/views/pages/login'
-import MainLayout from '@/layouts/Main'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './components/Home.vue'
+import Login from './components/Login.vue'
+import Registrar from './components/Registrar.vue'
+import Forgot from './components/Forgot.vue'
+import Reset from './components/Reset.vue'
 
-/**
- *
- * Rotas do sistema
- *
- */
-Vue.use(Router)
+Vue.use(Router);
 
-const router = new Router({
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      redirect: 'home',
-      component: MainLayout,
-      meta: {
-        authRequired: true,
-        hidden: true,
-      },
-      title: 'SaaSCom',
-      children: [
-        {
-          path: '/home',
-          meta: {
-            title: 'Empresas',
-          },
-          component: () => import('./views/pages/home'),
-        },
-        {
-          path: '/detalhes',
-          meta: {
-            title: 'Empresas',
-          },
-          component: () => import('./components/SaastecComponents/DetalhesLoja'),
-        },
-        {
-          path: '/404',
-          meta: {
-            title: '404',
-          },
-          component: () => import('./views/404'),
-        },
-      ],
-    },
-
-    // System Pages
-    {
-      id: 'login-page',
-      path: '/user/login',
-      component: Login,
-    },
-    {
-      path: '*', redirect: '/404', hidden: true,
-    },
-  ],
+export default new Router({
+    mode: 'history',
+    routes: [
+        { path: '/', component: Home },
+        { path: '/login', component: Login },
+        { path: '/registrar', component: Registrar },
+        { path: '/esqueci', component: Forgot },
+        { path: '/reset/:token', component: Reset }
+    ]
 })
-
-export default router
