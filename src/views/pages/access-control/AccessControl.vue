@@ -5,10 +5,10 @@
       md="6"
     >
       <v-card>
-        <v-card-title>Common</v-card-title>
-        <v-card-text>No ability is required to view this card</v-card-text>
+        <v-card-title>Comum</v-card-title>
+        <v-card-text>Nenhuma habilidade é necessária para visualizar este cartão</v-card-text>
         <v-card-text class="primary--text">
-          This card is visible to 'user' and 'admin' both
+          Este cartão é visível para 'usuário' e 'administrador' tanto
         </v-card-text>
       </v-card>
     </v-col>
@@ -18,10 +18,10 @@
       md="6"
     >
       <v-card>
-        <v-card-title>Analytics</v-card-title>
-        <v-card-text>User with 'Analytics' subject's 'Read' ability can view this card</v-card-text>
+        <v-card-title>Análise</v-card-title>
+        <v-card-text>O usuário com a habilidade 'Ler' do assunto 'Analytics' pode visualizar este cartão</v-card-text>
         <v-card-text class="text-danger">
-          This card is visible to 'admin' only
+          Este cartão está visível apenas para 'administrador'
         </v-card-text>
       </v-card>
     </v-col>

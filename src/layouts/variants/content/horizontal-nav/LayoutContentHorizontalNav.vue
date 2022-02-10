@@ -62,16 +62,16 @@
           href="https://www.informatize.inf.br"
           class="text-decoration-none"
           target="blank"
-        >Informatize</a>, All rights Reserved</span>
-        <div class="d-flex align-center">
-          <span>Hand-crafted &amp; Made with</span>
+        >Informatize</a>, Todos os direitos reservados</span>
+        <!-- <div class="d-flex align-center">
+          <span>Feito à mão &amp; Feito com</span>
           <v-icon
             color="error"
             class="ms-2"
           >
             {{ icons.mdiHeartOutline }}
           </v-icon>
-        </div>
+        </div> -->
       </div>
     </template>
 

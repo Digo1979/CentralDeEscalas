@@ -70,10 +70,10 @@
               <v-card flat>
                 <v-card-text>
                   <p class="text-2xl font-weight-semibold text--primary my-2">
-                    Adventure starts here 🚀
+                    A aventura começa aqui 🚀
                   </p>
                   <p class="mb-2">
-                    Make your app management easy and fun!
+                    Torne o gerenciamento do seu aplicativo fácil e divertido!
                   </p>
                 </v-card-text>
 
@@ -86,10 +86,10 @@
                     <v-text-field
                       v-model="username"
                       outlined
-                      label="Username"
+                      label="Usuário"
                       :error-messages="errorMessages.username"
                       :rules="[validators.required, validators.alphaValidator]"
-                      placeholder="Username"
+                      placeholder="Usuário"
                       hide-details="auto"
                       class="mb-6"
                     ></v-text-field>
@@ -99,8 +99,8 @@
                       outlined
                       :error-messages="errorMessages.email"
                       :rules="[validators.required, validators.emailValidator]"
-                      label="Email"
-                      placeholder="Email"
+                      label="E-mail"
+                      placeholder="E-mail"
                       hide-details="auto"
                       class="mb-6"
                     ></v-text-field>
@@ -109,9 +109,9 @@
                       v-model="password"
                       outlined
                       :type="isPasswordVisible ? 'text' : 'password'"
-                      label="Password"
+                      label="Senha"
                       :error-messages="errorMessages.password"
-                      placeholder="Password"
+                      placeholder="Senha"
                       :rules="[validators.required, validators.passwordValidator]"
                       :append-icon="isPasswordVisible ? icons.mdiEyeOffOutline:icons.mdiEyeOutline"
                       hide-details="auto"
@@ -125,7 +125,7 @@
                     >
                       <template #label>
                         <div class="d-flex align-center flex-wrap">
-                          <span class="me-2">I agree to</span><a href="javascript:void(0)">privacy policy &amp; terms</a>
+                          <span class="me-2">Eu concordo</span><a href="javascript:void(0)">política de privacidade &amp; termos </a>
                         </div>
                       </template>
                     </v-checkbox>
@@ -136,7 +136,7 @@
                       type="submit"
                       class="mt-6"
                     >
-                      Sign Up
+                      Inscrever-se
                     </v-btn>
                   </v-form>
                 </v-card-text>
@@ -144,22 +144,22 @@
                 <!-- create new account  -->
                 <v-card-text class="d-flex align-center justify-center flex-wrap mt-2">
                   <p class="mb-0 me-2">
-                    Already have an account?
+                    Já tem uma conta?
                   </p>
                   <router-link :to="{name:'auth-login'}">
-                    Sign in instead
+                    Faça login em vez disso
                   </router-link>
                 </v-card-text>
 
                 <!-- divider -->
-                <v-card-text class="d-flex align-center mt-2">
+                <!-- <v-card-text class="d-flex align-center mt-2">
                   <v-divider></v-divider>
                   <span class="mx-5">or</span>
                   <v-divider></v-divider>
-                </v-card-text>
+                </v-card-text> -->
 
                 <!-- social links -->
-                <v-card-actions class="d-flex justify-center">
+                <!-- <v-card-actions class="d-flex justify-center">
                   <v-btn
                     v-for="link in socialLink"
                     :key="link.icon"
@@ -170,7 +170,7 @@
                       {{ link.icon }}
                     </v-icon>
                   </v-btn>
-                </v-card-actions>
+                </v-card-actions> -->
               </v-card>
             </v-col>
           </v-row>
@@ -182,13 +182,13 @@
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiFacebook, mdiTwitter, mdiGithub, mdiGoogle, mdiEyeOutline, mdiEyeOffOutline } from '@mdi/js'
-// eslint-disable-next-line object-curly-newline
-import { required, emailValidator, passwordValidator, alphaValidator } from '@core/utils/validation'
-import { ref, getCurrentInstance } from '@vue/composition-api'
 import axios from '@axios'
 import { useRouter } from '@core/utils'
+// eslint-disable-next-line object-curly-newline
+import { alphaValidator, emailValidator, passwordValidator, required } from '@core/utils/validation'
+import { mdiEyeOffOutline, mdiEyeOutline, mdiFacebook, mdiGithub, mdiGoogle, mdiTwitter } from '@mdi/js'
 import themeConfig from '@themeConfig'
+import { getCurrentInstance, ref } from '@vue/composition-api'
 
 export default {
   setup() {

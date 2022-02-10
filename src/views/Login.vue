@@ -16,7 +16,7 @@
         ></v-img>
 
         <h2 class="text--primary">
-          {{ appName }}
+          Central de Escalas
         </h2>
       </router-link>
       <!--/ brand logo -->
@@ -70,10 +70,10 @@
               <v-card flat>
                 <v-card-text>
                   <p class="text-2xl font-weight-semibold text--primary mb-2">
-                    Welcome to Materio! 👋🏻
+                    Bem-vindo ao Central de Escalas 👋🏻
                   </p>
                   <p class="mb-2">
-                    Please sign-in to your account and start the adventure
+                    Faça login na sua conta
                   </p>
                 </v-card-text>
 
@@ -100,8 +100,8 @@
                     <v-text-field
                       v-model="email"
                       outlined
-                      label="Email"
-                      placeholder="email"
+                      label="E-mail"
+                      placeholder="E-mail"
                       :error-messages="errorMessages.email"
                       :rules="[validators.required, validators.emailValidator]"
                       hide-details="auto"
@@ -112,9 +112,9 @@
                       v-model="password"
                       outlined
                       :type="isPasswordVisible ? 'text' : 'password'"
-                      label="Password"
+                      label="Senha"
                       :error-messages="errorMessages.password"
-                      placeholder="Password"
+                      placeholder="Senha"
                       :append-icon="isPasswordVisible ? icons.mdiEyeOffOutline:icons.mdiEyeOutline"
                       :rules="[validators.required]"
                       hide-details="auto"
@@ -125,7 +125,7 @@
                     <div class="d-flex align-center justify-space-between flex-wrap">
                       <v-checkbox
                         hide-details
-                        label="Remember Me"
+                        label="Lembre de mim"
                         class="mt-0"
                       >
                       </v-checkbox>
@@ -135,7 +135,7 @@
                         :to="{name:'auth-forgot-password'}"
                         class="ms-3"
                       >
-                        Forgot Password?
+                        Esqueceu a senha?
                       </router-link>
                     </div>
 
@@ -145,7 +145,7 @@
                       type="submit"
                       class="mt-6"
                     >
-                      Login
+                      Acessar
                     </v-btn>
                   </v-form>
                 </v-card-text>
@@ -153,22 +153,22 @@
                 <!-- create new account  -->
                 <v-card-text class="d-flex align-center justify-center flex-wrap mt-2">
                   <p class="mb-0 me-2">
-                    New on our platform?
+                    Novo em nossa plataforma?
                   </p>
                   <router-link :to="{name:'auth-register'}">
-                    Create an account
+                    Crie a sua conta aqui
                   </router-link>
                 </v-card-text>
 
                 <!-- divider -->
-                <v-card-text class="d-flex align-center mt-2">
+                <!-- <v-card-text class="d-flex align-center mt-2">
                   <v-divider></v-divider>
                   <span class="mx-5">or</span>
                   <v-divider></v-divider>
-                </v-card-text>
+                </v-card-text> -->
 
                 <!-- socail links -->
-                <v-card-actions class="d-flex justify-center">
+                <!-- <v-card-actions class="d-flex justify-center">
                   <v-btn
                     v-for="link in socialLink"
                     :key="link.icon"
@@ -179,7 +179,7 @@
                       {{ link.icon }}
                     </v-icon>
                   </v-btn>
-                </v-card-actions>
+                </v-card-actions> -->
               </v-card>
             </v-col>
           </v-row>
@@ -191,12 +191,12 @@
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiFacebook, mdiTwitter, mdiGithub, mdiGoogle, mdiEyeOutline, mdiEyeOffOutline } from '@mdi/js'
-import { ref, getCurrentInstance } from '@vue/composition-api'
-import { required, emailValidator } from '@core/utils/validation'
 import axios from '@axios'
 import { useRouter } from '@core/utils'
+import { emailValidator, required } from '@core/utils/validation'
+import { mdiEyeOffOutline, mdiEyeOutline, mdiFacebook, mdiGithub, mdiGoogle, mdiTwitter } from '@mdi/js'
 import themeConfig from '@themeConfig'
+import { getCurrentInstance, ref } from '@vue/composition-api'
 
 export default {
   setup() {

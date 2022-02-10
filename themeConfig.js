@@ -2,7 +2,7 @@ import { mdiCheckboxBlankCircleOutline } from '@mdi/js'
 
 const themeConfig = {
   app: {
-    name: 'MATERIO',
+    name: 'Central de Escalas',
     logo: '/favicon-32x32.png', // require('@/assets/images/svg/logo.svg'),
     isDark: false,
     isRtl: false,
