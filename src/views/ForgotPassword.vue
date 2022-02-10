@@ -70,10 +70,10 @@
               <v-card flat>
                 <v-card-text>
                   <p class="text-2xl font-weight-semibold text--primary mb-2">
-                    Forgot Password? 🔒
+                    Esqueceu a senha? 🔒
                   </p>
                   <p class="mb-2">
-                    Enter your email and we'll send you instructions to reset your password
+                    Digite seu e-mail e enviaremos instruções para redefinir sua senha
                   </p>
                 </v-card-text>
 
@@ -83,7 +83,7 @@
                     <v-text-field
                       v-model="email"
                       outlined
-                      label="Email"
+                      label="E-mail"
                       placeholder="john@example.com"
                       hide-details
                       class="mb-4"
@@ -93,7 +93,7 @@
                       block
                       color="primary"
                     >
-                      Send reset link
+                      Enviar link de redefinição
                     </v-btn>
                   </v-form>
                 </v-card-text>
@@ -109,7 +109,7 @@
                     >
                       {{ icons.mdiChevronLeft }}
                     </v-icon>
-                    <span>Back to login</span>
+                    <span>Volte ao login</span>
                   </router-link>
                 </v-card-actions>
               </v-card>
@@ -123,8 +123,8 @@
 
 <script>
 import { mdiChevronLeft } from '@mdi/js'
-import { ref } from '@vue/composition-api'
 import themeConfig from '@themeConfig'
+import { ref } from '@vue/composition-api'
 
 export default {
   setup() {
