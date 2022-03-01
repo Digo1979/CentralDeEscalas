@@ -106,16 +106,15 @@
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { ref, onUnmounted, computed, watch } from '@vue/composition-api'
-import { mdiChevronLeft, mdiChevronRight, mdiMenu } from '@mdi/js'
-import { useResponsiveLeftSidebar } from '@core/comp-functions/ui'
 import store from '@/store'
-import { hexToRgb, getVuetify } from '@core/utils'
-import calendarStoreModule from './calendarStoreModule'
-
+import { useResponsiveLeftSidebar } from '@core/comp-functions/ui'
+import { getVuetify, hexToRgb } from '@core/utils'
+import { mdiChevronLeft, mdiChevronRight, mdiMenu } from '@mdi/js'
+import { computed, onUnmounted, ref, watch } from '@vue/composition-api'
+import CalendarEventHandlerDrawerContent from './CalendarEventHandlerDrawerContent.vue'
 // Local Components
 import CalendarLeftSidebarContent from './CalendarLeftSidebarContent.vue'
-import CalendarEventHandlerDrawerContent from './CalendarEventHandlerDrawerContent.vue'
+import calendarStoreModule from './calendarStoreModule'
 
 export default {
   components: {

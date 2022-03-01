@@ -28,7 +28,8 @@
 
         <!-- Right Content: I18n, Light/Dark, Notification & User Dropdown -->
         <div class="d-flex align-center right-row">
-          <app-bar-i18n></app-bar-i18n>
+          <!-- INTERNACIONALIZACAO -->
+          <!-- <app-bar-i18n></app-bar-i18n> -->
           <app-bar-theme-switcher class="mx-4"></app-bar-theme-switcher>
           <app-bar-notification></app-bar-notification>
           <app-bar-user-menu></app-bar-user-menu>

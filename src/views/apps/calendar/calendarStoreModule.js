@@ -6,26 +6,26 @@ export default {
     calendarOptions: [
       {
         color: 'error',
-        label: 'Personal',
+        label: 'Joaquina',
       },
       {
         color: 'primary',
-        label: 'Business',
+        label: 'José',
       },
       {
         color: 'warning',
-        label: 'Family',
+        label: 'Paulo',
       },
       {
         color: 'success',
-        label: 'Holiday',
+        label: 'Maria',
       },
       {
         color: 'info',
-        label: 'ETC',
+        label: 'Bia',
       },
     ],
-    selectedCalendars: ['Personal', 'Business', 'Family', 'Holiday', 'ETC'],
+    selectedCalendars: ['Joaquina', 'José', 'Paulo', 'Maria', 'Bia'],
   },
   getters: {},
   mutations: {

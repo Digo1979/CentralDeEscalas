@@ -133,9 +133,9 @@
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiClose, mdiCheckCircleOutline, mdiBellOutline, mdiAccountOutline, mdiTrashCanOutline } from '@mdi/js'
-import useVuetify from '@core/utils/vuetify'
 import { avatarText } from '@core/utils/filter'
+import useVuetify from '@core/utils/vuetify'
+import { mdiAccountOutline, mdiBellOutline, mdiCheckCircleOutline, mdiClose, mdiTrashCanOutline } from '@mdi/js'
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
 import useChat from './useChat'
 

@@ -5,12 +5,12 @@
       color="primary"
       @click="$emit('open-evnt-handler-drawer')"
     >
-      Add Event
+      Novo
     </v-btn>
 
     <!-- Calendars -->
     <p class="text-xs text--disabled mt-8 mb-1">
-      CALENDARS
+      CALENDÁRIO
     </p>
 
     <!-- Calendar Options -->

@@ -54,7 +54,7 @@ export default [
   { header: 'Pages' },
 
   // dashboard
-  { title: 'CRM', to: { name: 'dashboard-crm' }, icon: mdiHomeOutline },
+  // { title: 'CRM', to: { name: 'dashboard-crm' }, icon: mdiHomeOutline },
   { title: 'Analytics', to: { name: 'dashboard-analytics' }, icon: mdiHomeOutline },
   { title: 'eCommerce', to: { name: 'dashboard-eCommerce' }, icon: mdiHomeOutline },
 

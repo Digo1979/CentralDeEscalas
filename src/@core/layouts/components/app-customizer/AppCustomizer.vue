@@ -25,9 +25,9 @@
         <h6
           class="font-weight-semibold text-xl text--primary"
         >
-          THEME CUSTOMIZER
+          TPERSONALIZADOR DE TEMA
         </h6>
-        <span class="text--secondary">Customize and preview in real time</span>
+        <span class="text--secondary">Personalize e visualize em tempo real</span>
         <v-btn
           icon
           class="icon-customizer-close"
@@ -48,7 +48,7 @@
         <!-- Section: Themeing -->
         <div class="customizer-section">
           <p class="text-xs text--disabled">
-            THEMING
+            TEMAS
           </p>
           <!-- Skin -->
           <span class="text--primary">Skin</span>
@@ -68,13 +68,13 @@
           <!-- Mode -->
           <span class="mt-6 d-inline-block mb-2 text--primary">Mode</span>
           <div class="d-flex align-center">
-            <span class="text--secondary text-sm">Light</span>
+            <span class="text--secondary text-sm">Diurno</span>
             <v-switch
               v-model="isDark"
               hide-details
               class="mt-0 mx-2"
             ></v-switch>
-            <span class="text--secondary text-sm">Dark</span>
+            <span class="text--secondary text-sm">Noturno</span>
           </div>
         </div>
 
@@ -87,7 +87,7 @@
           </p>
 
           <!-- Content Width -->
-          <span class="text--primary">Content Width</span>
+          <span class="text--primary">Largura do conteúdo</span>
           <v-radio-group
             v-model="appContentWidth"
             class="mt-1"
@@ -103,7 +103,7 @@
           </v-radio-group>
 
           <!-- AppBar Type -->
-          <span class="mt-6 d-inline-block text--primary">AppBar Type</span>
+          <span class="mt-6 d-inline-block text--primary">Barra superior</span>
           <v-radio-group
             v-model="appBarType"
             class="mt-1"
@@ -119,7 +119,7 @@
           </v-radio-group>
 
           <!-- Footer Type -->
-          <span class="mt-6 d-inline-block text--primary">Footer Type</span>
+          <span class="mt-6 d-inline-block text--primary">Rodapé</span>
           <v-radio-group
             v-model="footerType"
             class="mt-1"
@@ -135,14 +135,14 @@
           </v-radio-group>
 
           <!-- Blur -->
-          <div class="d-flex align-center justify-space-between mt-6">
+          <!-- <div class="d-flex align-center justify-space-between mt-6">
             <span class="text--primary">AppBar Blur</span>
             <v-switch
               v-model="appBarIsBlurred"
               hide-details
               class="mt-0 ms-2"
             ></v-switch>
-          </div>
+          </div> -->
         </div>
 
         <v-divider></v-divider>
@@ -154,7 +154,7 @@
           </p>
           <template v-if="$vuetify.breakpoint.lgAndUp">
             <!-- Menu Layout -->
-            <span class="text--primary">Menu Layout</span>
+            <span class="text--primary">Esquema do Menu</span>
             <v-radio-group
               v-model="appContentLayoutNav"
               class="mt-1"
@@ -175,7 +175,7 @@
             v-if="appContentLayoutNav === 'vertical'"
             class="d-flex align-center justify-space-between mt-6"
           >
-            <span class="text--primary">Menu Collapsed</span>
+            <span class="text--primary">Menu recolhido</span>
             <v-switch
               v-model="menuIsVerticalNavMini"
               hide-details
@@ -185,7 +185,7 @@
 
           <!-- Menu Hidden -->
           <div class="d-flex align-center justify-space-between mt-6">
-            <span class="text--primary">Menu Hidden</span>
+            <span class="text--primary">Menu Oculto</span>
             <v-switch
               v-model="menuIsMenuHidden"
               hide-details
@@ -197,7 +197,7 @@
         <!-- Section: Misc -->
         <div class="customizer-section">
           <p class="text-xs text--disabled">
-            MISC
+            DIVERSOS
           </p>
           <!-- RTL -->
           <div class="d-flex align-center justify-space-between mt-6">
@@ -210,7 +210,7 @@
           </div>
           <!-- Router Transition -->
           <v-row class="mt-6 align-center">
-            <v-col><span class="text--primary">Router Transition</span></v-col>
+            <v-col><span class="text--primary">Transição do roteador</span></v-col>
             <v-col col="4">
               <v-select
                 v-model="appRouteTransition"
@@ -229,11 +229,9 @@
 </template>
 
 <script>
-import { computed, ref } from '@vue/composition-api'
 import useAppConfig from '@core/@app-config/useAppConfig'
-
-import { mdiCog, mdiClose } from '@mdi/js'
-
+import { mdiClose, mdiCog } from '@mdi/js'
+import { computed, ref } from '@vue/composition-api'
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
 import themeVariants from './themeVariants'
 
@@ -277,9 +275,9 @@ export default {
 
     const skinOptions = computed(() => {
       const options = [
-        { label: 'Default', value: 'default' },
-        { label: 'Bordered', value: 'bordered' },
-        { label: 'Semi Dark', value: 'semi-dark' },
+        { label: 'Padrão', value: 'default' },
+        { label: 'Delimitado ', value: 'bordered' },
+        { label: 'Semi escuro', value: 'semi-dark' },
       ]
       if (appContentLayoutNav.value === 'horizontal') options.splice(-1, 1)
 
@@ -287,15 +285,15 @@ export default {
     })
 
     const appContentWidthOptions = [
-      { label: 'Full Width', value: 'full' },
-      { label: 'Boxed', value: 'boxed' },
+      { label: 'Largura completa', value: 'full' },
+      { label: 'Em caixa', value: 'boxed' },
     ]
 
     const appBarTypeOptions = computed(() => {
       const types = [
-        { label: 'Fixed', value: 'fixed' },
-        { label: 'Static', value: 'static' },
-        { label: 'Hidden', value: 'hidden' },
+        { label: 'Fixo', value: 'fixed' },
+        { label: 'Estático', value: 'static' },
+        { label: 'Escondido', value: 'hidden' },
       ]
       if (appContentLayoutNav.value === 'horizontal') types.splice(-1, 1)
 
@@ -303,9 +301,9 @@ export default {
     })
 
     const footerTypeOptions = [
-      { label: 'Fixed', value: 'fixed' },
-      { label: 'Static', value: 'static' },
-      { label: 'Hidden', value: 'hidden' },
+      { label: 'Fixo', value: 'fixed' },
+      { label: 'Estático', value: 'static' },
+      { label: 'Escondido', value: 'hidden' },
     ]
 
     const appContentLayoutNavOptions = [

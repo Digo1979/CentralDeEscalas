@@ -10,7 +10,7 @@ const data = {
       password: 'admin',
       // eslint-disable-next-line global-require
       avatar: require('@/assets/images/avatars/1.png'),
-      email: 'admin@materio.com',
+      email: 'admin@centraldeescalas.com.br',
       role: 'admin',
       ability: [
         {
@@ -26,7 +26,7 @@ const data = {
       password: 'client',
       // eslint-disable-next-line global-require
       avatar: require('@/assets/images/avatars/2.png'),
-      email: 'client@materio.com',
+      email: 'client@centraldeescalas.com.br',
       role: 'client',
       ability: [
         {

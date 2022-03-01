@@ -1,0 +1,8 @@
+--> Principal
+src\router\index.js
+
+--> Rotas
+src\router\apps.js
+
+--> Barra de pesquisa
+src\assets\app-bar-search-data.js
