@@ -1,0 +1,1 @@
+xcopy "D:\Dropbox\01.Clientes\06. Informatize\Vue\Apps\CentralDeEscalas\dist\*" "U:\xampp\htdocs\escala\" /e /y

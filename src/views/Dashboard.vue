@@ -1,4 +1,16 @@
-<script setup></script>
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+onMounted(() => {
+  if (!localStorage.getItem("loggedIn")) {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("username");
+    router.push("/login");
+  }
+});
+</script>
 
 <template>
   <div class="container-fluid">
@@ -95,7 +107,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-8" v-if="1==2">
+      <div class="col-xl-8" v-if="1 == 2">
         <div class="card-transparent card-block card-stretch card-height">
           <div class="card-body p-0">
             <div class="card">
@@ -485,7 +497,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-4" v-if="1==2">
+      <div class="col-xl-4" v-if="1 == 2">
         <div class="card card-block card-stretch card-height">
           <div class="card-body">
             <div class="card border-bottom pb-2 shadow-none">

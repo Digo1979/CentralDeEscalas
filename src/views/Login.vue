@@ -100,7 +100,7 @@ export default {
   },
 
   created() {
-    if (localStorage.getItem('loggedIn')) {
+    if (localStorage.getItem("loggedIn")) {
       this.$router.push("/dashboard");
     }
   },
