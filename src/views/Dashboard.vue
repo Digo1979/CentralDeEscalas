@@ -3,13 +3,16 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-onMounted(() => {
-  if (!localStorage.getItem("loggedIn")) {
-    localStorage.removeItem("loggedIn");
-    localStorage.removeItem("username");
-    router.push("/login");
-  }
-});
+setup() {
+  onMounted(() => {
+    console.log('O componente foi montado!')
+    if (!localStorage.getItem("loggedIn")) {
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("username");
+      router.push("/login");
+    }
+  });
+}
 </script>
 
 <template>
