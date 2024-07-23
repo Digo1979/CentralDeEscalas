@@ -1,22 +1,21 @@
 <script setup>
 import { useRouter } from "vue-router";
+import { onMounted } from "vue";
 
 const router = useRouter();
 
-setup() {
-  onMounted(() => {
-    console.log('O componente foi montado!')
-    if (!localStorage.getItem("loggedIn")) {
-      localStorage.removeItem("loggedIn");
-      localStorage.removeItem("username");
-      router.push("/login");
-    }
-  });
-}
+onMounted(() => {
+  console.log("O componente foi montado!");
+  if (!localStorage.getItem("loggedIn")) {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("username");
+    router.push("/login");
+  }
+});
 </script>
 
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid">    
     <div class="row">
       <div class="col-md-6 col-lg-3">
         <div class="card card-block card-stretch card-height">
